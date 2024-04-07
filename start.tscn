@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bklf5o8lpanot"]
+
+[ext_resource type="Texture2D" uid="uid://baeovav5xjslo" path="res://ghosties/ghost-1.png" id="1_hp63h"]
+[ext_resource type="Texture2D" uid="uid://brfqgrcn5u457" path="res://ghosties/ghost-4.png" id="2_8pa2l"]
+[ext_resource type="Texture2D" uid="uid://coifa26tg8myf" path="res://ghosties/ghost-6.png" id="3_qmbgj"]
+[ext_resource type="Texture2D" uid="uid://d3l60yvf4gsxq" path="res://bed.png" id="4_as5or"]
+
+[node name="Ghost-1" type="Sprite2D"]
+position = Vector2(187, 544)
+texture = ExtResource("1_hp63h")
+
+[node name="Ghost-4" type="Sprite2D" parent="."]
+position = Vector2(231, -7)
+texture = ExtResource("2_8pa2l")
+
+[node name="Ghost-6" type="Sprite2D" parent="."]
+position = Vector2(383, -3)
+texture = ExtResource("3_qmbgj")
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(800, -34.9999)
+scale = Vector2(0.297, 0.34411)
+texture = ExtResource("4_as5or")
