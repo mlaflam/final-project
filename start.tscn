@@ -1,23 +1,83 @@
-[gd_scene load_steps=5 format=3 uid="uid://bklf5o8lpanot"]
+[gd_scene load_steps=13 format=3 uid="uid://bklf5o8lpanot"]
 
 [ext_resource type="Texture2D" uid="uid://baeovav5xjslo" path="res://ghosties/ghost-1.png" id="1_hp63h"]
 [ext_resource type="Texture2D" uid="uid://brfqgrcn5u457" path="res://ghosties/ghost-4.png" id="2_8pa2l"]
 [ext_resource type="Texture2D" uid="uid://coifa26tg8myf" path="res://ghosties/ghost-6.png" id="3_qmbgj"]
-[ext_resource type="Texture2D" uid="uid://d3l60yvf4gsxq" path="res://bed.png" id="4_as5or"]
+[ext_resource type="Texture2D" uid="uid://5wwyevqycu2w" path="res://bed-3.png" id="4_5l4sa"]
+[ext_resource type="Texture2D" uid="uid://cptojbphnwisy" path="res://desk.png" id="5_2b5l6"]
+[ext_resource type="Texture2D" uid="uid://cmieshyefu4q7" path="res://desk-2.png" id="6_4qpg3"]
+[ext_resource type="Texture2D" uid="uid://cfouj54bvqcej" path="res://desk-full.png" id="7_rprlb"]
+[ext_resource type="Texture2D" uid="uid://bpj7oe6cr206k" path="res://icon.svg" id="8_x2gqd"]
+[ext_resource type="Texture2D" uid="uid://dvbom360717jh" path="res://right-door.png" id="9_b6rpb"]
+[ext_resource type="Texture2D" uid="uid://doi4gbx045dro" path="res://door.png" id="10_lxej6"]
+[ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="11_h20xc"]
+[ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="12_usqpl"]
 
 [node name="Ghost-1" type="Sprite2D"]
-position = Vector2(187, 544)
+position = Vector2(265, 685)
+scale = Vector2(1.08333, 1.06)
 texture = ExtResource("1_hp63h")
 
 [node name="Ghost-4" type="Sprite2D" parent="."]
-position = Vector2(231, -7)
+z_index = 1
+position = Vector2(10.1539, -284.906)
+scale = Vector2(1.37212, 1.37212)
 texture = ExtResource("2_8pa2l")
 
 [node name="Ghost-6" type="Sprite2D" parent="."]
-position = Vector2(383, -3)
+visible = false
+position = Vector2(134, -198)
 texture = ExtResource("3_qmbgj")
 
-[node name="Bed" type="Sprite2D" parent="."]
-position = Vector2(800, -34.9999)
-scale = Vector2(0.297, 0.34411)
-texture = ExtResource("4_as5or")
+[node name="Bed-3" type="Sprite2D" parent="."]
+position = Vector2(803.077, -39.6226)
+scale = Vector2(0.989584, 0.989584)
+texture = ExtResource("4_5l4sa")
+
+[node name="Desk" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(477, -249)
+texture = ExtResource("5_2b5l6")
+
+[node name="Desk-2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(479, -86)
+texture = ExtResource("6_4qpg3")
+
+[node name="Desk-full" type="Sprite2D" parent="."]
+position = Vector2(417.231, -83.0189)
+scale = Vector2(1.15451, 1.09961)
+texture = ExtResource("7_rprlb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+z_index = -1
+anchors_preset = -1
+anchor_left = -0.186
+anchor_top = -3.259
+anchor_right = -0.186
+anchor_bottom = -3.259
+offset_left = -59.68
+offset_top = -72.15
+offset_right = 1089.32
+offset_bottom = 574.85
+texture = ExtResource("8_x2gqd")
+
+[node name="Right-door" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(472.615, -84.9057)
+scale = Vector2(1.31385, 1.31385)
+texture = ExtResource("9_b6rpb")
+
+[node name="Door" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(297.231, -124.528)
+texture = ExtResource("10_lxej6")
+
+[node name="Door-right" type="Sprite2D" parent="."]
+position = Vector2(1056.92, -97.1698)
+texture = ExtResource("11_h20xc")
+
+[node name="Door-left" type="Sprite2D" parent="."]
+position = Vector2(-67.3846, -94.3396)
+texture = ExtResource("12_usqpl")
