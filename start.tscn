@@ -19,6 +19,20 @@ position = Vector2(265, 685)
 scale = Vector2(1.08333, 1.06)
 texture = ExtResource("1_hp63h")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = -1
+anchor_left = -1.529
+anchor_top = -3.78
+anchor_right = -1.529
+anchor_bottom = -3.78
+offset_left = -63.52
+offset_top = -81.0
+offset_right = 1416.48
+offset_bottom = 677.0
+texture = ExtResource("7_pv8q0")
+expand_mode = 2
+
 [node name="Ghost-4" type="Sprite2D" parent="."]
 z_index = 2
 position = Vector2(872.31, -102.83)
@@ -45,20 +59,6 @@ z_index = 1
 position = Vector2(414.463, -62.2641)
 scale = Vector2(1.23632, 1.17713)
 texture = ExtResource("7_rprlb")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
-anchors_preset = -1
-anchor_left = -1.529
-anchor_top = -3.78
-anchor_right = -1.529
-anchor_bottom = -3.78
-offset_left = -63.52
-offset_top = -81.0
-offset_right = 1416.48
-offset_bottom = 677.0
-texture = ExtResource("7_pv8q0")
-expand_mode = 2
 
 [node name="Right-door" type="Sprite2D" parent="."]
 position = Vector2(472.615, -84.9057)

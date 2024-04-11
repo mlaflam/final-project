@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://cymqa6rc50qlv"]
+
+[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://background.png" id="1_p8j4r"]
+[ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="2_l1j5h"]
+[ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="3_0eicu"]
+[ext_resource type="Texture2D" uid="uid://bbw87yr4giy72" path="res://bed-new.png" id="4_pwwnj"]
+[ext_resource type="Texture2D" uid="uid://cfouj54bvqcej" path="res://desk-full.png" id="5_pk8h8"]
+[ext_resource type="Texture2D" uid="uid://baeovav5xjslo" path="res://ghosties/ghost-1.png" id="6_vw8nr"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 1599.0
+offset_bottom = 804.0
+texture = ExtResource("1_p8j4r")
+expand_mode = 2
+
+[node name="Door-right" type="Sprite2D" parent="."]
+position = Vector2(1425, 597)
+texture = ExtResource("2_l1j5h")
+
+[node name="Door-left" type="Sprite2D" parent="."]
+position = Vector2(174, 595)
+texture = ExtResource("3_0eicu")
+
+[node name="Bed-new" type="Sprite2D" parent="."]
+position = Vector2(1239, 656)
+texture = ExtResource("4_pwwnj")
+
+[node name="Desk-full" type="Sprite2D" parent="."]
+position = Vector2(716, 641)
+scale = Vector2(1.09833, 1.09833)
+texture = ExtResource("5_pk8h8")
+
+[node name="Ghost-1" type="Sprite2D" parent="."]
+position = Vector2(253, 684)
+scale = Vector2(1.06667, 1.06667)
+texture = ExtResource("6_vw8nr")
