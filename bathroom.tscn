@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cblj5q37tg5rc"]
+
+[ext_resource type="Texture2D" uid="uid://dot4wtfw338xw" path="res://kitch3.png" id="1_sslt6"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 1604.0
+offset_bottom = 806.0
+texture = ExtResource("1_sslt6")

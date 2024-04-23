@@ -1,11 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://cymqa6rc50qlv"]
+[gd_scene load_steps=12 format=3 uid="uid://cymqa6rc50qlv"]
 
 [ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://background.png" id="1_p8j4r"]
+[ext_resource type="PackedScene" uid="uid://dcodpi4nx3sk" path="res://Character.tscn" id="2_gsy3b"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="2_l1j5h"]
+[ext_resource type="Script" path="res://Area2D_bed-bath.gd" id="2_okoon"]
 [ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="3_0eicu"]
 [ext_resource type="Texture2D" uid="uid://bbw87yr4giy72" path="res://bed-new.png" id="4_pwwnj"]
 [ext_resource type="Texture2D" uid="uid://cfouj54bvqcej" path="res://desk-full.png" id="5_pk8h8"]
-[ext_resource type="Texture2D" uid="uid://baeovav5xjslo" path="res://ghosties/ghost-1.png" id="6_vw8nr"]
+[ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="7_0a4th"]
+[ext_resource type="Script" path="res://Area2D1.gd" id="8_wdpgb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwqim"]
+size = Vector2(91.5, 527.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qt0n"]
+size = Vector2(64.5, 525)
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 1599.0
@@ -13,11 +22,27 @@ offset_bottom = 804.0
 texture = ExtResource("1_p8j4r")
 expand_mode = 2
 
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1657, 546)
+script = ExtResource("2_okoon")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-77.25, -4)
+shape = SubResource("RectangleShape2D_cwqim")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_gsy3b")]
+z_index = 1
+position = Vector2(178, 674)
+motion_mode = 1
+movement_speed = 400.0
+
 [node name="Door-right" type="Sprite2D" parent="."]
-position = Vector2(1425, 597)
+z_index = 2
+position = Vector2(1426, 596)
 texture = ExtResource("2_l1j5h")
 
 [node name="Door-left" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(174, 595)
 texture = ExtResource("3_0eicu")
 
@@ -26,11 +51,25 @@ position = Vector2(1239, 656)
 texture = ExtResource("4_pwwnj")
 
 [node name="Desk-full" type="Sprite2D" parent="."]
-position = Vector2(716, 641)
-scale = Vector2(1.09833, 1.09833)
+position = Vector2(704, 632)
+scale = Vector2(1.17417, 1.17417)
 texture = ExtResource("5_pk8h8")
 
-[node name="Ghost-1" type="Sprite2D" parent="."]
-position = Vector2(253, 684)
-scale = Vector2(1.06667, 1.06667)
-texture = ExtResource("6_vw8nr")
+[node name="edge" parent="." instance=ExtResource("7_0a4th")]
+
+[node name="edge2" parent="." instance=ExtResource("7_0a4th")]
+position = Vector2(-7, -822)
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(-17, 535)
+script = ExtResource("8_wdpgb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(48.75, 9)
+shape = SubResource("RectangleShape2D_7qt0n")
+
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
