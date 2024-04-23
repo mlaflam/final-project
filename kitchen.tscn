@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8af1emo0snb7"]
+[gd_scene load_steps=14 format=3 uid="uid://c8af1emo0snb7"]
 
 [ext_resource type="Texture2D" uid="uid://cr5nqc52cnh6x" path="res://green-kitchen.png" id="1_qs6i0"]
 [ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="2_xmvsm"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dcodpi4nx3sk" path="res://Character.tscn" id="9_x42hj"]
 [ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="10_mi7dx"]
 [ext_resource type="Script" path="res://Area2D2.gd" id="11_ihpod"]
+[ext_resource type="PackedScene" uid="uid://oj6i8i12jegi" path="res://side_edge.tscn" id="12_87e7x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bc8wq"]
 size = Vector2(68, 528)
@@ -73,6 +74,12 @@ script = ExtResource("11_ihpod")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1572, 545)
 shape = SubResource("RectangleShape2D_bc8wq")
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("12_87e7x")]
+position = Vector2(-32, 4)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("12_87e7x")]
+position = Vector2(1603, -1)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
