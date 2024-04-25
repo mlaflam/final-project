@@ -1,0 +1,9 @@
+extends TextureRect
+
+var spawn_position = Vector2(200, 700)
+
+func _ready():
+	RoomManager.wasBath = true
+	var player = preload("res://Player.tscn").instantiate()
+	add_child(player)
+	player.position = spawn_position # Set the player's position to the spawn position

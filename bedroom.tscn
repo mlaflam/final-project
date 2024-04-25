@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://cymqa6rc50qlv"]
 
 [ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://background.png" id="1_p8j4r"]
-[ext_resource type="PackedScene" uid="uid://dcodpi4nx3sk" path="res://Character.tscn" id="2_gsy3b"]
+[ext_resource type="Script" path="res://bedroom.gd" id="2_4asnk"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="2_l1j5h"]
 [ext_resource type="Script" path="res://Area2D_bed-bath.gd" id="2_okoon"]
 [ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="3_0eicu"]
 [ext_resource type="Texture2D" uid="uid://bbw87yr4giy72" path="res://bed-new.png" id="4_pwwnj"]
 [ext_resource type="Texture2D" uid="uid://cfouj54bvqcej" path="res://desk-full.png" id="5_pk8h8"]
 [ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="7_0a4th"]
-[ext_resource type="Script" path="res://Area2D1.gd" id="8_wdpgb"]
+[ext_resource type="Script" path="res://Area2D_bed-kitch.gd" id="9_1m0d2"]
 [ext_resource type="PackedScene" uid="uid://oj6i8i12jegi" path="res://side_edge.tscn" id="10_fkx87"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwqim"]
@@ -22,6 +22,7 @@ offset_right = 1599.0
 offset_bottom = 804.0
 texture = ExtResource("1_p8j4r")
 expand_mode = 2
+script = ExtResource("2_4asnk")
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(1657, 546)
@@ -30,12 +31,6 @@ script = ExtResource("2_okoon")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-77.25, -4)
 shape = SubResource("RectangleShape2D_cwqim")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_gsy3b")]
-z_index = 1
-position = Vector2(178, 674)
-motion_mode = 1
-movement_speed = 400.0
 
 [node name="Door-right" type="Sprite2D" parent="."]
 z_index = 2
@@ -48,7 +43,7 @@ position = Vector2(174, 595)
 texture = ExtResource("3_0eicu")
 
 [node name="Bed-new" type="Sprite2D" parent="."]
-position = Vector2(1239, 656)
+position = Vector2(1168, 656)
 texture = ExtResource("4_pwwnj")
 
 [node name="Desk-full" type="Sprite2D" parent="."]
@@ -64,7 +59,7 @@ position = Vector2(-7, -822)
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
 position = Vector2(-17, 535)
-script = ExtResource("8_wdpgb")
+script = ExtResource("9_1m0d2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(48.75, 9)
@@ -76,7 +71,11 @@ position = Vector2(-37, -2)
 [node name="StaticBody2D2" parent="." instance=ExtResource("10_fkx87")]
 position = Vector2(1599, 8)
 
+[node name="Destination" type="Node2D" parent="." groups=["Destination"]]
+position = Vector2(1408, 638)
+
+[node name="Destination" type="Marker2D" parent="Destination" groups=["Destination"]]
+position = Vector2(-1, 4)
+
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

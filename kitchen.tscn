@@ -1,6 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c8af1emo0snb7"]
 
 [ext_resource type="Texture2D" uid="uid://cr5nqc52cnh6x" path="res://green-kitchen.png" id="1_qs6i0"]
+[ext_resource type="Script" path="res://kitchen.gd" id="2_tyixp"]
 [ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="2_xmvsm"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="3_mbgxp"]
 [ext_resource type="Texture2D" uid="uid://baeovav5xjslo" path="res://ghosties/ghost-1.png" id="4_6jfwi"]
@@ -8,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://d0xni5rpwqd1p" path="res://glass.png" id="6_qbix4"]
 [ext_resource type="Texture2D" uid="uid://cpeyyw6rl528d" path="res://frame.png" id="7_2hxyc"]
 [ext_resource type="Texture2D" uid="uid://cb5rl6x7nnyy6" path="res://ghosties-backwards/pixil-frame-0.png" id="8_tl52h"]
-[ext_resource type="PackedScene" uid="uid://dcodpi4nx3sk" path="res://Character.tscn" id="9_x42hj"]
 [ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="10_mi7dx"]
 [ext_resource type="Script" path="res://Area2D2.gd" id="11_ihpod"]
 [ext_resource type="PackedScene" uid="uid://oj6i8i12jegi" path="res://side_edge.tscn" id="12_87e7x"]
@@ -22,6 +22,7 @@ offset_right = 1603.0
 offset_bottom = 801.0
 texture = ExtResource("1_qs6i0")
 expand_mode = 2
+script = ExtResource("2_tyixp")
 
 [node name="Door-left" type="Sprite2D" parent="."]
 z_index = 2
@@ -58,11 +59,6 @@ position = Vector2(1451, 707)
 scale = Vector2(1.26833, 1.26833)
 texture = ExtResource("8_tl52h")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("9_x42hj")]
-position = Vector2(1445, 688)
-motion_mode = 1
-movement_speed = 400.0
-
 [node name="edge" parent="." instance=ExtResource("10_mi7dx")]
 
 [node name="edge2" parent="." instance=ExtResource("10_mi7dx")]
@@ -82,4 +78,3 @@ position = Vector2(-32, 4)
 position = Vector2(1603, -1)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
