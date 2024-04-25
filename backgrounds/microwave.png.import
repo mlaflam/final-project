@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crefircg1agy3"
-path="res://.godot/imported/microwave.png-1649ef919d90c86af20f5df9216c1a22.ctex"
+path="res://.godot/imported/microwave.png-e7c9de8e454b850d65e185ad65ffd81e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://microwave.png"
-dest_files=["res://.godot/imported/microwave.png-1649ef919d90c86af20f5df9216c1a22.ctex"]
+source_file="res://backgrounds/microwave.png"
+dest_files=["res://.godot/imported/microwave.png-e7c9de8e454b850d65e185ad65ffd81e.ctex"]
 
 [params]
 

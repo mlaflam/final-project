@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://coifa26tg8myf" path="res://ghosties/ghost-6.png" id="3_qmbgj"]
 [ext_resource type="Texture2D" uid="uid://cptojbphnwisy" path="res://desk.png" id="5_2b5l6"]
 [ext_resource type="Texture2D" uid="uid://cmieshyefu4q7" path="res://desk-2.png" id="6_4qpg3"]
-[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://background.png" id="7_pv8q0"]
+[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://backgrounds/background.png" id="7_pv8q0"]
 [ext_resource type="Texture2D" uid="uid://cfouj54bvqcej" path="res://desk-full.png" id="7_rprlb"]
 [ext_resource type="Texture2D" uid="uid://doi4gbx045dro" path="res://door.png" id="10_lxej6"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="11_h20xc"]

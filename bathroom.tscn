@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cblj5q37tg5rc"]
 
-[ext_resource type="Texture2D" uid="uid://jxa27sel2iwn" path="res://bathroom.png" id="1_23nq4"]
+[ext_resource type="Texture2D" uid="uid://jxa27sel2iwn" path="res://backgrounds/bathroom.png" id="1_23nq4"]
 [ext_resource type="Script" path="res://bathroom.gd" id="2_lk06e"]
 [ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="2_uucdu"]
 [ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="3_7u836"]

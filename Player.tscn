@@ -9,7 +9,7 @@ size = Vector2(155, 208)
 [node name="PLAYER" type="CharacterBody2D" groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_ir2fk")
-movement_speed = 400.0
+movement_speed = 450.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, -2)

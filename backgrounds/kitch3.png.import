@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0xni5rpwqd1p"
-path="res://.godot/imported/glass.png-b25359403f040fff4041ec96179e1d08.ctex"
+uid="uid://dot4wtfw338xw"
+path="res://.godot/imported/kitch3.png-fdae046908f9ef74701edd91f095ee36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://glass.png"
-dest_files=["res://.godot/imported/glass.png-b25359403f040fff4041ec96179e1d08.ctex"]
+source_file="res://backgrounds/kitch3.png"
+dest_files=["res://.godot/imported/kitch3.png-fdae046908f9ef74701edd91f095ee36.ctex"]
 
 [params]
 

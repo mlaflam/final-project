@@ -9,13 +9,14 @@ func _ready():
 	add_child(player)
 	
 	if !RoomManager.wasBath:
-		print("hello")
+		#print("hello")
 		player.position = spawn_position # Set the player's position to the spawn position
 	
 	if RoomManager.wasBath:
-		print("goodbye")
+		#print("goodbye")
 		# Access the Position2D node representing the destination point
-		var destination_point = $Destination
+		#var destination_point = $Destination
+		spawn_position = Vector2(1400, 700)
 		
 		# Set the player's position to the destination point
-		player.position = destination_point.position
+		player.position = spawn_position

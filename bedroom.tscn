@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cymqa6rc50qlv"]
 
-[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://background.png" id="1_p8j4r"]
+[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://backgrounds/background.png" id="1_p8j4r"]
 [ext_resource type="Script" path="res://bedroom.gd" id="2_4asnk"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="2_l1j5h"]
 [ext_resource type="Script" path="res://Area2D_bed-bath.gd" id="2_okoon"]
@@ -70,12 +70,6 @@ position = Vector2(-37, -2)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("10_fkx87")]
 position = Vector2(1599, 8)
-
-[node name="Destination" type="Node2D" parent="." groups=["Destination"]]
-position = Vector2(1408, 638)
-
-[node name="Destination" type="Marker2D" parent="Destination" groups=["Destination"]]
-position = Vector2(-1, 4)
 
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
