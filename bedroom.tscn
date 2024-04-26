@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cymqa6rc50qlv"]
 
-[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://backgrounds/background.png" id="1_p8j4r"]
+[ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://backgrounds/background.png" id="1_lnq71"]
 [ext_resource type="Script" path="res://bedroom.gd" id="2_4asnk"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="2_l1j5h"]
 [ext_resource type="Script" path="res://Area2D_bed-bath.gd" id="2_okoon"]
@@ -20,7 +20,7 @@ size = Vector2(64.5, 525)
 [node name="TextureRect" type="TextureRect"]
 offset_right = 1599.0
 offset_bottom = 804.0
-texture = ExtResource("1_p8j4r")
+texture = ExtResource("1_lnq71")
 expand_mode = 2
 script = ExtResource("2_4asnk")
 

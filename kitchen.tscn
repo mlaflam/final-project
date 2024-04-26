@@ -1,14 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8af1emo0snb7"]
+[gd_scene load_steps=12 format=3 uid="uid://c8af1emo0snb7"]
 
 [ext_resource type="Texture2D" uid="uid://cr5nqc52cnh6x" path="res://backgrounds/green-kitchen.png" id="1_qs6i0"]
 [ext_resource type="Script" path="res://kitchen.gd" id="2_tyixp"]
 [ext_resource type="Texture2D" uid="uid://qb81lbufmfo" path="res://door-left.png" id="2_xmvsm"]
 [ext_resource type="Texture2D" uid="uid://bmyjfi5pxw2ft" path="res://door-right.png" id="3_mbgxp"]
-[ext_resource type="Texture2D" uid="uid://baeovav5xjslo" path="res://ghosties/ghost-1.png" id="4_6jfwi"]
 [ext_resource type="Texture2D" uid="uid://crefircg1agy3" path="res://backgrounds/microwave.png" id="5_0g0qk"]
 [ext_resource type="Texture2D" uid="uid://d0xni5rpwqd1p" path="res://backgrounds/glass.png" id="6_qbix4"]
 [ext_resource type="Texture2D" uid="uid://cpeyyw6rl528d" path="res://backgrounds/frame.png" id="7_2hxyc"]
-[ext_resource type="Texture2D" uid="uid://cb5rl6x7nnyy6" path="res://ghosties-backwards/pixil-frame-0.png" id="8_tl52h"]
 [ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="10_mi7dx"]
 [ext_resource type="Script" path="res://Area2D2.gd" id="11_ihpod"]
 [ext_resource type="PackedScene" uid="uid://oj6i8i12jegi" path="res://side_edge.tscn" id="12_87e7x"]
@@ -34,12 +32,6 @@ z_index = 2
 position = Vector2(1427, 597)
 texture = ExtResource("3_mbgxp")
 
-[node name="Ghost-1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(105, 711)
-scale = Vector2(1.25833, 1.25833)
-texture = ExtResource("4_6jfwi")
-
 [node name="Microwave" type="Sprite2D" parent="."]
 position = Vector2(1024, 504)
 scale = Vector2(0.138377, 0.138377)
@@ -52,12 +44,6 @@ texture = ExtResource("6_qbix4")
 [node name="Frame" type="Sprite2D" parent="."]
 position = Vector2(800, 401)
 texture = ExtResource("7_2hxyc")
-
-[node name="Pixil-frame-0" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1451, 707)
-scale = Vector2(1.26833, 1.26833)
-texture = ExtResource("8_tl52h")
 
 [node name="edge" parent="." instance=ExtResource("10_mi7dx")]
 
