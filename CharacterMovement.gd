@@ -4,7 +4,20 @@ extends CharacterBody2D
 var force_coefficient = 20
 var apply_gravity : bool
 var gravity = ProjectSettings.get("physics/2d/default_gravity")
+var sprite: Sprite2D 
+var sprite2: Sprite2D 
 
+func _process(delta):
+	sprite = get_node("Sad")
+	sprite2 = get_node("Happy")
+	if RoomManager.sad == true: #display sad
+		sprite.visible = true
+		sprite2.visible = false
+	
+	else:
+		sprite.visible = false
+		sprite2.visible = true
+		
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,9 +32,14 @@ func get_input(delta):
 	
 	# Check if input direction is less than 0 in the x-axis (moving left)
 	if input_direction.x < 0:
-		$Sprite2D.flip_h = true
+		for child in get_children():
+			if child is Sprite2D:
+				child.flip_h = true
+				
 	else:
-		$Sprite2D.flip_h = false
+		for child in get_children():
+			if child is Sprite2D:
+				child.flip_h = false
 
 	if apply_gravity:
 		velocity.x = input_direction.x * movement_speed

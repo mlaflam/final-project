@@ -1,17 +1,14 @@
 extends Button
 
+var button_name: String  # Store the name of the button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	button_name = name  # Store the name of the button
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-
 func _on_pressed():
-	RoomManager.isPlantOn = true
-	RoomManager.sad = true # make him sad
-	DialogueManager.show_dialogue_balloon(load("res://plant.dialogue"), "plant")
+	RoomManager.target_button_name = button_name  # Setting target button name

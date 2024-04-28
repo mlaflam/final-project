@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cymqa6rc50qlv"]
+[gd_scene load_steps=20 format=3 uid="uid://cymqa6rc50qlv"]
 
 [ext_resource type="Texture2D" uid="uid://dscbglvdu1in4" path="res://backgrounds/background.png" id="1_lnq71"]
 [ext_resource type="Script" path="res://bedroom.gd" id="2_4asnk"]
@@ -10,12 +10,21 @@
 [ext_resource type="PackedScene" uid="uid://dimsl1q7vtf8u" path="res://edge.tscn" id="7_0a4th"]
 [ext_resource type="Script" path="res://Area2D_bed-kitch.gd" id="9_1m0d2"]
 [ext_resource type="PackedScene" uid="uid://oj6i8i12jegi" path="res://side_edge.tscn" id="10_fkx87"]
+[ext_resource type="Script" path="res://Area2D_Alarm.gd" id="11_4q5fx"]
+[ext_resource type="Texture2D" uid="uid://dek0mio7r2b0b" path="res://ghosties/6-clock.png" id="11_cw231"]
+[ext_resource type="Texture2D" uid="uid://cino360no03uq" path="res://ghosties/630-clock.png" id="12_03brg"]
+[ext_resource type="Script" path="res://Button_Alarm.gd" id="12_o36bx"]
+[ext_resource type="Texture2D" uid="uid://cwsaino0imvxk" path="res://ghosties/7-clock.png" id="13_0ieis"]
+[ext_resource type="Script" path="res://Button_Time.gd" id="13_e384d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwqim"]
 size = Vector2(91.5, 527.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qt0n"]
 size = Vector2(64.5, 525)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6q1m"]
+size = Vector2(39.5, 36.5)
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 1599.0
@@ -71,5 +80,101 @@ position = Vector2(-37, -2)
 [node name="StaticBody2D2" parent="." instance=ExtResource("10_fkx87")]
 position = Vector2(1599, 8)
 
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(687, 602)
+script = ExtResource("11_4q5fx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(23, 22)
+shape = SubResource("RectangleShape2D_b6q1m")
+
+[node name="Button" type="Button" parent="Area2D3"]
+offset_left = 53.0
+offset_top = -19.0
+offset_right = 136.0
+offset_bottom = 12.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Set Alarm"
+script = ExtResource("12_o36bx")
+
+[node name="Button1" type="Button" parent="Area2D3/Button"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 29.0
+offset_right = 70.0
+offset_bottom = 60.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "6:00"
+script = ExtResource("13_e384d")
+
+[node name="Button2" type="Button" parent="Area2D3/Button"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 30.0
+offset_right = 114.0
+offset_bottom = 61.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "6:30"
+script = ExtResource("13_e384d")
+
+[node name="Button3" type="Button" parent="Area2D3/Button"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 30.0
+offset_right = 158.0
+offset_bottom = 61.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "7:00"
+script = ExtResource("13_e384d")
+
+[node name="6-clock" type="Sprite2D" parent="Area2D3"]
+position = Vector2(52, 39)
+scale = Vector2(1.153, 1.15)
+texture = ExtResource("11_cw231")
+
+[node name="630-clock" type="Sprite2D" parent="Area2D3"]
+position = Vector2(52, 39)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("12_03brg")
+
+[node name="7-clock" type="Sprite2D" parent="Area2D3"]
+position = Vector2(52, 39)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("13_0ieis")
+
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D3" to="Area2D3" method="_on_body_exited"]
+[connection signal="pressed" from="Area2D3/Button" to="Area2D3/Button" method="_on_pressed"]
+[connection signal="pressed" from="Area2D3/Button/Button1" to="Area2D3/Button/Button1" method="_on_pressed"]
+[connection signal="pressed" from="Area2D3/Button/Button2" to="Area2D3/Button/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Area2D3/Button/Button3" to="Area2D3/Button/Button3" method="_on_pressed"]
