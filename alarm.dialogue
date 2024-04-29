@@ -1,10 +1,28 @@
 ~ alarm
 
 # if sad diff dialogue  ?
+if RoomManager.target_button_name == "Button1":
+	Ghostly Thoughts: Maybe thats too early... But now she won't be late. 
 
-Ghostly Thoughts: 
-	
-	Maybe thats too late 
-	
-	
+else if RoomManager.target_button_name == "Button2":
+	Ghostly Thoughts: I've got to be quick. 
+
+
+else if RoomManager.target_button_name == "Button3":
+	Ghostly Thoughts: Hopefully thats not too late. She likes to sleep in. Now I have more time to help!
+
 => END
+#
+## if sad diff dialogue  ?
+#if RoomManager.target_sprite == "6-clock":
+#	Ghostly Thoughts: Maybe thats too early... But now she won't be late. 
+#
+#else if RoomManager.target_sprite == "630-clock":
+#	Ghostly Thoughts: I've got to be quick. 
+#
+#
+#else if RoomManager.target_sprite == "7-clock":
+#	Ghostly Thoughts: Hopefully thats not too late. She likes to sleep in. Now I have more time to help!
+#
+#if RoomManager.target_button_name == "Button 1":
+#	Ho: ho ho ho
